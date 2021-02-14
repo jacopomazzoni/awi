@@ -1,0 +1,450 @@
+@charset "UTF-8"; 
+/*
+Theme Name: AWI
+Theme URI: http://artworkersitalia.it/
+Author: Jacopo Mazzoni
+Author URI: http://jmazzoni.it
+Description: Custom Theme based on bootstrap
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: awi
+
+This theme, like WordPress, is licensed under the GPL.
+
+*/
+
+/* normalize     */
+/* typography    */
+/* global        */
+/* template      */
+/* specific page */
+
+
+ul {
+    list-style-type: none;
+  }
+
+a.active {
+    text-decoration: underline;
+    color:blue;
+}
+
+a, a:hover, a:focus {
+    color:blue;
+    word-break: normal;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover{
+    color: #00f;
+  }
+
+h1 {
+    text-transform: uppercase;
+}
+#page-cont h1 {
+    text-transform: uppercase;
+    font-family:Impact, Impacto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    color:blue;
+    /*font-size: 7vw;*/
+    font-size: 8vw;
+    line-height: 0.95;
+}
+
+a{
+    /* font-family: 'Times New Roman', Times, serif; */
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#page-cont a{
+  text-decoration: underline;
+}
+
+body, html, main, p{
+    font-family: 'Times New Roman','times_new_roman', Times, serif;
+    color:blue;
+    line-height: 1.1;
+}
+.impact {
+    font-family:Impact, Impacto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+
+  }
+
+  
+.sub-1::before {
+    content: "\00a0 \00a0 \00a0 \00a0 "; 
+    display:inline-block;
+  }
+  
+  .sub-2::before{
+    content: "\00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 "; 
+    display:inline-block;
+  }
+
+  /* SCROLLBAR BEGIN */
+/* FIREFOX */
+#menu,#page-cont {
+    overflow-y: scroll;
+    scrollbar-color: #00f #fff;
+    /* scrollbar-color: #ddd #00f; */
+    scrollbar-width: thin;
+  }
+
+/* EVERYONE ELSE*/
+/* width */
+ ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background-color: #fff;
+    /*box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;*/
+  }
+  
+/*   Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00f;
+    /*border-radius: 10px;*/
+  }  
+
+  /* SCROLLBAR END */
+
+  /* change hamburger menu color */
+ .navbar-toggler-icon.custom-toggler {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.custom-toggler.navbar-toggler {
+  color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+} 
+.custom-toggler.navbar-toggler:active {
+  color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+} 
+
+  /* Extra small devices (portrait phones, less than 576px)
+ No media query since this is the default in Bootstrap */
+
+#menu, #page-cont {
+    overflow:auto;
+    overflow-x: hidden;
+  }
+  
+  #site-title {
+    width:50vw;
+  }
+  #page-cont {
+    line-height: 1;
+}
+   
+  
+  /* Clone navbar behaviour */
+  #menu {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+ 
+  
+   /* Small devices (landscape phones, 576px and up) ------*/
+  @media (min-width: 576px) { 
+    #menu, #page-cont {
+      overflow:auto;  
+      overflow-x: hidden;
+  
+    }
+    #page-cont {
+      line-height: 1;
+  }
+
+ /* Clone navbar behaviour */
+ #menu {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+  }
+  
+  /*
+   *  ^^^^^^^^^ MOBILE ^^^^^^^^^^
+   *  vvvvvvvvv DESKTOP vvvvvvvvv
+   */
+  
+  /* Medium devices (tablets, 768px and up) -------------- */
+  @media (min-width: 768px) { 
+    /* Layout */
+    
+    main {
+      height: 100vh;
+    }
+    #menu, #page-cont {
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    #page-cont {
+      line-height: 1;
+    }
+    #page-cont p, #page-cont ul {
+      font-size: 2rem;
+    }
+    /* Menu */
+    #menu {
+      display: block;
+    }
+    #site-title {
+      width:inherit;
+    }
+    .navbar-left{
+          flex-flow:column nowrap;
+          align-items:flex-start
+      }
+      .navbar-left .navbar-collapse{
+          flex-grow:1;
+          flex-direction:column;
+          width:100%
+      }
+      .navbar-left .navbar-collapse .navbar-nav{
+          flex-direction:column;
+          width:100%
+      }
+      .navbar-left .navbar-collapse .navbar-nav .nav-item{
+          width:100%
+      }
+      .navbar-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu{
+          top:0
+      }
+      .nav-link {
+        padding:0;
+      } 
+  
+   }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    main {
+      height: 100vh;
+    }
+    #menu, #page-cont {
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    #page-cont {
+      line-height: 1;
+  }
+    #menu {
+      display: block;
+    }
+    #page-cont p, #page-cont ul{
+      font-size: 2rem;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
+    main {
+      height: 100vh;
+    }
+    #menu, #page-cont {
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    #page-cont {
+      line-height: 1;
+  }
+    #menu {
+      display: block;
+    }
+    #page-cont p, #page-cont ul{
+      font-size: 2rem;
+    }
+  }
+
+  /* ------ WORDPRESS MANDATORY STUFF -------- */
+
+  .size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+.wp-caption,
+.wp-caption-text,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter{
+  border: 0;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/* TinyMCE STUFF */
+
+.swp_scode_btn{
+  text-align: center;
+  margin: 20px 0px;
+}
+.swp_scode_btn a{
+  color: #fff !important;
+  padding: 10px 30px
+}
+.swp_scode_btn a:hover{
+  text-decoration: none;
+  opacity:.50;
+}
+
+/**
+ * TinyMCE add support for dashicons
+ */
+ i.mce-i-myicon {
+  font: 400 20px/1 dashicons;
+  padding: 0;
+  vertical-align: top;
+  /*speak: none;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: -2px;
+  padding-right: 2px
+}
+
+.awi_brace {
+  font-family: Impact,Impacto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.725em;
+}
+
+.awi_brace::before {
+  content: "[";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+.awi_brace::after {
+  content: "]";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+#page-cont ul {
+  list-style-type: disc;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.nav-link, .menu-item, .menu-item a{
+  display:inline-block;
+  width:100%;
+}
+
+#navbarsExampleDefault {
+  line-height: 1;
+}
+
+li.menu-item-has-children {
+  font-weight: bold;
+}
+
+.sub-menu, .sub-menu li.menu-item-has-children{
+  font-weight: normal;
+}
+
+.menu-item:hover, .sub-menu:hover {
+  text-decoration: underline;
+
+}
+
+.current_page_item {
+  text-decoration: underline;
+}
+
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1000ms, opacity 1000ms;
+}
+
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1000ms;
+}
+
+#overlay{
+  position: fixed;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+/*   background-color: #fff;
+ */  background-color: #00f;
+
+}
+
+.entry p {
+  font-size: 1rem;
+}

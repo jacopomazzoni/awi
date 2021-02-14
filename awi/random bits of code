@@ -1,0 +1,17 @@
+
+,
+              array(
+                  'name' => 'Box Theme',
+                  'descr' => 'This sets the color scheme for the class box.  Please look at Classes page to determine the appropriate theme for your new listing',
+                  'id' => $prefix . 'theme',
+                  'class' => $prefix . 'theme',
+                  'type' => 'theme_colors',
+                  'options' => array (
+                      array('color' => 'Pink'),
+                      array('color' => 'Purple'),
+                      array('color' => 'Teal'),
+                      array('color' => 'Green')
+                  )
+
+
+                  
